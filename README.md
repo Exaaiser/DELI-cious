@@ -9,7 +9,7 @@ This project is a Java-based Command Line Interface (CLI) ordering application d
 * **Extra Toppings:** Options for extra meat and cheese.
 * **Toasting Option:** Ability to choose if the sandwich should be toasted.
 * **Order Summary:** Display order details and total price before checkout.
-* **Receipt Saving:** Completed orders are saved as receipt files (named by date and time) into a `receipts` folder[cite: 20].
+* **Receipt Saving:** Completed orders are saved as receipt files (named by date and time) into a `receipts` folder 
 * **View Previous Orders:** List and display past order receipts.
 
 ## Application Screenshots
