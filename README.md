@@ -151,3 +151,9 @@ Toppings add functionality to sandwiches with flexible pricing
 # CASUAL DIAGRAM
  ![Image Alt](https://raw.githubusercontent.com/Exaaiser/DELI-cious/refs/heads/main/Casual%20Diagram.png)
 
+# DETAILED DIAGRAM
+![Image Alt](https://raw.githubusercontent.com/Exaaiser/DELI-cious/refs/heads/main/Detailed%20Diagrams.png)
+
+
+For Detailed Diagram I got help from Claude
+
