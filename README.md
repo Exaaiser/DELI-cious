@@ -145,3 +145,6 @@ Builders create products based on user input
 Order aggregates multiple items
 OrderManager handles persistence
 Toppings add functionality to sandwiches with flexible pricing
+
+## Images about class diagrams 
+
