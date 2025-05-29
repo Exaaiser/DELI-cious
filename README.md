@@ -16,6 +16,7 @@ Architecture Components
 Core Product System
 
 Product (Abstract)
+
 ├── name: String
 ├── price: double
 ├── getName(): String
@@ -29,6 +30,7 @@ Chip - Snack items with name and price**
 
 Sandwich Class
 Sandwich extends Product implements Item
+
 ├── size: int
 ├── breadType: String
 ├── isToasted: boolean
@@ -42,6 +44,7 @@ Sandwich extends Product implements Item
 
 Topping Hierarchy
 Topping (Abstract)
+
 ├── name: String
 ├── getPrice(): double
 └── Implementations:
@@ -59,6 +62,7 @@ SandwichBuilder - Creates sandwich products
 📦 Order Management
 Order System
 Order
+
 ├── items: List<Item>
 ├── addItem(Item): void
 ├── getTotalPrice(): double
@@ -67,13 +71,15 @@ Order
 └── clear(): void
 
 OrderManager
-OrderManager
+
+
 ├── saveOrder(Order): void
 └── loadPreviousOrders(): List<String>
 
 🖥️ User Interface
 UserInterface Class
 UserInterface
+
 ├── scanner: Scanner
 ├── orderManager: OrderManager
 ├── currentOrder: Order
