@@ -148,3 +148,6 @@ Toppings add functionality to sandwiches with flexible pricing
 
 ## Images about class diagrams 
 
+# CASUAL DIAGRAM
+ ![Image Alt](https://raw.githubusercontent.com/Exaaiser/DELI-cious/refs/heads/main/Casual%20Diagram.png)
+
