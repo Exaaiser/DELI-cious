@@ -17,10 +17,10 @@ Core Product System
 
 Product (Abstract)
 
-├── name: String
-├── price: double
-├── getName(): String
-└── getPrice(): double
+── name: String
+── price: double
+── getName(): String
+── getPrice(): double
 
 **Product Types:
 
