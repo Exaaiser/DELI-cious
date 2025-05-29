@@ -12,7 +12,94 @@ This project is a Java-based Command Line Interface (CLI) ordering application d
 * **Receipt Saving:** Completed orders are saved as receipt files (named by date and time) into a `receipts` folder 
 * **View Previous Orders:** List and display past order receipts.
 
-## Application Screenshots
+Architecture Components
+Core Product System
 
-*Example Main Menu Screen:*
-(Add an image of your application's main menu screen here.)
+Product (Abstract)
+├── name: String
+├── price: double
+├── getName(): String
+└── getPrice(): double
+
+**Product Types:
+
+Sandwich - Customizable sandwiches with toppings and sides
+Drink - Beverages with size and flavor options
+Chip - Snack items with name and price**
+
+Sandwich Class
+Sandwich extends Product implements Item
+├── size: int
+├── breadType: String
+├── isToasted: boolean
+├── toppings: List<Topping>
+├── sauces: List<SauceTopping>
+├── sides: List<SideItem>
+├── getPrice(): double
+├── addTopping(Topping): void
+├── addSauce(SauceTopping): void
+└── addSide(SideItem): void
+
+Topping Hierarchy
+Topping (Abstract)
+├── name: String
+├── getPrice(): double
+└── Implementations:
+    ├── CheeseTopping - getPrice(int, boolean): double
+    ├── MeatTopping - getPrice(int, boolean): double  
+    ├── RegularTopping - getPrice(): double
+    └── SauceTopping - getPrice(): double
+
+Product Builders:
+
+ChipBuilder - Creates chip products
+DrinkBuilder - Creates drink products
+SandwichBuilder - Creates sandwich products
+
+📦 Order Management
+Order System
+Order
+├── items: List<Item>
+├── addItem(Item): void
+├── getTotalPrice(): double
+├── displayOrder(): void
+├── printReceipt(): void
+└── clear(): void
+
+OrderManager
+OrderManager
+├── saveOrder(Order): void
+└── loadPreviousOrders(): List<String>
+
+🖥️ User Interface
+UserInterface Class
+UserInterface
+├── scanner: Scanner
+├── orderManager: OrderManager
+├── currentOrder: Order
+├── start(): void
+├── startNewOrder(): void
+├── viewPreviousOrders(): void
+├── checkout(): void
+└── cancelOrder(): void
+
+🔧 Utility Classes
+Main - Application entry point with main(String[]): void
+ProductMaker - Factory for creating products: createProduct(String, String, double) Product
+SideItem - Side dish items with name and pricing
+
+🔗 Key Relationships
+
+Inheritance: Product → Sandwich/Drink/Chip
+Composition: Sandwich contains Lists of Toppings, Sauces, and SideItems
+Interface Implementation: All products implement the Item interface
+Builder Pattern: Separate builders for each product type
+Aggregation: Order contains multiple Items
+
+📊 Class Interaction Flow
+
+UserInterface manages the main application flow
+Builders create products based on user input
+Order aggregates multiple items
+OrderManager handles persistence
+Toppings add functionality to sandwiches with flexible pricing
