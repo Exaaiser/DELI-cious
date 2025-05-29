@@ -36,26 +36,43 @@ Sandwich Class
 Sandwich extends Product implements Item
 
 ├── size: int
+
 ├── breadType: String
+
 ├── isToasted: boolean
+
 ├── toppings: List<Topping>
+
 ├── sauces: List<SauceTopping>
+
 ├── sides: List<SideItem>
+
 ├── getPrice(): double
+
 ├── addTopping(Topping): void
+
 ├── addSauce(SauceTopping): void
+
 └── addSide(SideItem): void
+
 
 Topping Hierarchy
 Topping (Abstract)
 
 ├── name: String
+
 ├── getPrice(): double
+
 └── Implementations:
+
     ├── CheeseTopping - getPrice(int, boolean): double
-    ├── MeatTopping - getPrice(int, boolean): double  
+    
+    ├── MeatTopping - getPrice(int, boolean): double 
+    
     ├── RegularTopping - getPrice(): double
+    
     └── SauceTopping - getPrice(): double
+    
 
 Product Builders:
 
@@ -68,30 +85,45 @@ Order System
 Order
 
 ├── items: List<Item>
+
 ├── addItem(Item): void
+
 ├── getTotalPrice(): double
+
 ├── displayOrder(): void
+
 ├── printReceipt(): void
+
 └── clear(): void
 
 OrderManager
 
 
 ├── saveOrder(Order): void
+
 └── loadPreviousOrders(): List<String>
+
 
 🖥️ User Interface
 UserInterface Class
 UserInterface
 
 ├── scanner: Scanner
+
 ├── orderManager: OrderManager
+
 ├── currentOrder: Order
+
 ├── start(): void
+
 ├── startNewOrder(): void
+
 ├── viewPreviousOrders(): void
+
 ├── checkout(): void
+
 └── cancelOrder(): void
+
 
 🔧 Utility Classes
 Main - Application entry point with main(String[]): void
